@@ -1,126 +1,251 @@
+::::: {#loadingScreen .loading-screen}
+::: loader
+:::
+::: loading-text
+Welcome to Yash Gupta's Portfolio
+:::
+:::::
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Gupta - Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-</head>
-<body>
-    <canvas id="backgroundCanvas"></canvas>
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loader"></div>
-        <div class="loading-text">Welcome to My Portfolio</div>
-    </div>
-    <div class="container" style="display: none;" id="mainContent">
-        <nav class="nav-menu">
-            <div class="nav-item" data-section="education">Education</div>
-            <div class="nav-item" data-section="achievements">Achievements</div>
-            <div class="nav-item" data-section="projects">Projects</div>
-            <div class="nav-item" data-section="experience">Experience</div>
-            <div class="nav-item" data-section="skills">Skills</div>
-        </nav>
-        <div class="content">
-            <div class="header-container">
-                <h1 class="name-title">Yash Gupta</h1>
-                <p class="subtitle">Computer Science and Mathematics Student at BITS Pilani</p>
-                <p class="contact-info">
-                    +91 8888-0022-00 | gupta.yash3003@gmail.com | 
-                    <a href="https://linkedin.com/in/yash-gupta-7b0684224/" target="_blank" class="hover-effect">LinkedIn</a> | 
-                    <a href="https://github.com/YashGupta3003/" target="_blank" class="hover-effect">GitHub</a>
-                </p>
-            </div>
-            
-            <div class="two-column-grid">
-                <div class="left-column">
-                    <div class="education section-card" id="education">
-                        <h2 class="section-title">Education</h2>
-                        <div class="education-item card-hover">
-                            <h3>BITS Pilani (Aug 2021 – May 2026)</h3>
-                            <p>B.E. Computer Science and M.Sc Mathematics, Minor in Finance</p>
-                        </div>
-                    </div>
+:::::::::::::::::::::::::::::::::::::: {#mainContent .container style="display: none;"}
+::: {.nav-item section="education"}
+Education
+:::
 
-                    <div class="achievements section-card" id="achievements">
-                        <h2 class="section-title">Achievements</h2>
-                        <div class="achievement-grid">
-                            <div class="achievement card-hover">
-                                <h3>Goldman Sachs QA Hackathon</h3>
-                                <p>Rank 3 in BITS Hyderabad</p>
-                            </div>
-                            <div class="achievement card-hover">
-                                <h3>Nomura Markets Challenge</h3>
-                                <p>Rank 1 in BITS Hyderabad</p>
-                            </div>
-                            <div class="achievement card-hover">
-                                <h3>CodeChef: yash3003</h3>
-                                <p>1700 Rating (3-Star)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+::: {.nav-item section="achievements"}
+Achievements
+:::
 
-                <div class="right-column">
-                    <div class="projects section-card" id="projects">
-                        <h2 class="section-title">Projects</h2>
-                        <div class="project-grid">
-                            <div class="project card-hover">
-                                <h3>Stock Price Prediction</h3>
-                                <p class="tech-stack">Python, ML, Llama3</p>
-                            </div>
-                            <div class="project card-hover">
-                                <h3>BITSBIDS</h3>
-                                <p class="tech-stack">SpringBoot, React, AWS</p>
-                            </div>
-                            <div class="project card-hover">
-                                <h3>Rain Forecast</h3>
-                                <p class="tech-stack">Python, Keras</p>
-                            </div>
-                        </div>
-                    </div>
+::: {.nav-item section="projects"}
+Projects
+:::
 
-                    <div class="experience-skills-grid">
-                        <div class="experience section-card" id="experience">
-                            <h2 class="section-title">Experience</h2>
-                            <div class="exp-item card-hover">
-                                <h3>ML Summer Intern - IMD</h3>
-                                <p>May-July 2023 | Improved prediction by 34%</p>
-                            </div>
-                        </div>
+::: {.nav-item section="experience"}
+Experience
+:::
 
-                        <div class="skills section-card" id="skills">
-                            <h2 class="section-title">Skills</h2>
-                            <div class="skills-grid">
-                                <div class="skill-category">
-                                    <div class="skill-items">
-                                        <div class="skill-item">Python</div>
-                                        <div class="skill-item">C++</div>
-                                        <div class="skill-item">Java</div>
-                                        <div class="skill-item">SQL</div>
-                                        <div class="skill-item">Git</div>
-                                        <div class="skill-item">ML</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loadingScreen').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-            }, 2000);
-        });
-    </script>
-</body>
-</html>
-    
+::: {.nav-item section="research"}
+Research
+:::
+
+::: {.nav-item section="responsibilities"}
+Responsibilities
+:::
+
+::: {.nav-item section="skills"}
+Skills
+:::
+
+:::::::::::::::::::::::::::::::: content
+::: header-container
+# Yash Gupta {#yash-gupta .name-title}
+
+Computer Science and Mathematics Student at BITS Pilani
+
++91 8888-0022-00 \| gupta.yash3003@gmail.com \|
+[LinkedIn](https://linkedin.com/in/yash-gupta-7b0684224/){.hover-effect
+target="_blank"} \|
+[GitHub](https://github.com/YashGupta3003/){.hover-effect
+target="_blank"}
+:::
+
+:::::::::::::::::::::::::::::: two-column-grid
+:::::::::: left-column
+:::: {#education .education .section-card}
+## Education {.section-title}
+
+::: {.education-item .card-hover}
+### BITS Pilani (Aug 2021 -- May 2026)
+
+B.E. Computer Science and M.Sc Mathematics, Minor in Finance
+:::
+::::
+
+::::::: {#achievements .achievements .section-card}
+## Achievements {.section-title}
+
+:::::: achievement-grid
+::: {.achievement .card-hover}
+### Goldman Sachs QA Hackathon
+
+Rank 3 in BITS Hyderabad
+:::
+
+::: {.achievement .card-hover}
+### Nomura Markets Challenge
+
+Rank 1 in BITS Hyderabad
+:::
+
+::: {.achievement .card-hover}
+### CodeChef: yash3003
+
+Rating 1700 (3-Star), Starters 143 Global Rank 206
+:::
+::::::
+:::::::
+::::::::::
+
+::::::::::::::::::::: right-column
+::::::: {#projects .projects .section-card}
+## Projects {.section-title}
+
+:::::: project-grid
+::: {.project .card-hover}
+### Stock Price Prediction
+
+[GitHub](https://github.com/YashGupta3003/Stock-Price-Prediction)
+- Developed a SARIMAX-based stock price prediction model, incorporating sentiment analysis from news data using open source LLM-Llama3.
+- Built a Streamlit dashboard to visualize sentiment trends, stock price changes, and forecasted outcomes.
+:::
+
+::: {.project .card-hover}
+### BITSBIDS - Development
+
+[GitHub](https://github.com/YashGupta3003/BITSBIDS)
+- Implemented a dockerized web application supporting orders, inventory, bidding, and chat functionality.
+- Deployed using SpringBoot, MySQL, Docker, and AWS for image upload.
+:::
+
+::: {.project .card-hover}
+### Rain Forecast - Deep Learning
+
+[GitHub](https://github.com/YashGupta3003/IMD-FINAL-)
+- Developed LSTM, RandomForestRegressor, and MLP models for rainfall prediction using Indian Weather Data in Ncep files of over 50 years.
+:::
+::::::
+:::::::
+
+::::::::::::::: experience-skills-grid
+:::: {#experience .experience .section-card}
+## Experience {.section-title}
+
+::: {.exp-item .card-hover}
+### ML Summer Intern - IMD
+
+May-July 2023 \| Improved prediction by 34%
+- Developed MLP and LSTM models for predicting next-day rainfall using NumPy, Xarray, Pandas, TensorFlow, Keras, Matplotlib, Geopandas.
+- Utilized Back-Propagation to analyse the 50-year rainfall data and find corresponding time series patterns.
+- Enhanced model accuracy by 34% over previous models through optimized data inputs and architecture.
+:::
+::::
+
+:::::::::::: {#research .research .section-card}
+## Research {.section-title}
+
+::: {.research-item .card-hover}
+### Research Paper on ML Induced Forecast Technology
+
+Under Scientist E, Dr. Rajib Chakraborty
+- Writing a paper on the advantages of ML-influenced models over standard empirical formulae for rainfall prediction.
+[Paper Report](https://www.example.com/research-paper)
+:::
+::::
+
+:::::::::::: {#responsibilities .responsibilities .section-card}
+## Responsibilities {.section-title}
+
+::: {.responsibility-item .card-hover}
+### Senior Quant and Analytics Associate - The Wall Street Club
+
+- Analyzed stock correlations and market trends through deep learning models.
+- Used ML for portfolio diversification and asset allocation.
+:::
+
+::: {.responsibility-item .card-hover}
+### Operations and Training Coordinator - Placement Unit
+
+- Managed end-to-end placement process for 2000+ students.
+- Devised training strategies based on sector preferences and metrics.
+:::
+::::
+
+:::::::::::: {#skills .skills .section-card}
+## Skills {.section-title}
+
+::::::::::: skills-grid
+:::::::::: skill-category
+::::::::: skill-items
+::: skill-item
+Python
+:::
+
+::: skill-item
+C/C++
+:::
+
+::: skill-item
+SQL
+:::
+
+::: skill-item
+Java
+:::
+
+::: skill-item
+Git
+:::
+
+::: skill-item
+MongoDB
+:::
+
+::: skill-item
+Google Collab
+:::
+
+::: skill-item
+MySQL
+:::
+
+::: skill-item
+StreamLit
+:::
+
+::: skill-item
+Llama3
+:::
+
+::: skill-item
+OOPS
+:::
+
+::: skill-item
+Machine Learning
+:::
+
+::: skill-item
+DSA
+:::
+
+::: skill-item
+DBMS
+:::
+
+::: skill-item
+Operating Systems
+:::
+
+::: skill-item
+SAPM
+:::
+
+::: skill-item
+DRM
+:::
+
+::: skill-item
+BAV
+:::
+
+::: skill-item
+FM
+:::
+:::::::::
+::::::::::
+:::::::::::
+::::::::::::
+:::::::::::::::
+:::::::::::::::::::::
+::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
