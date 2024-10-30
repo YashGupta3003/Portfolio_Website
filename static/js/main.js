@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Custom cursor
     const cursor = document.createElement('div');
@@ -64,40 +63,4 @@ document.addEventListener('DOMContentLoaded', function() {
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
-        for (let i = scales.length - 1; i >= 0; i--) {
-            scales[i].draw();
-            if (scales[i].opacity <= 0) {
-                scales.splice(i, 1);
-            }
-        }
-        
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-
-    // Show sections when they come into view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    document.querySelectorAll('.section-card').forEach((section) => {
-        observer.observe(section);
-    });
-
-    // Navigation menu click handling
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', function() {
-            const sectionId = this.getAttribute('data-section');
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-});
-    
+        for (let i = scales.length - 1; i >= 0; i
